@@ -48,7 +48,9 @@ public class SistemaPrincipal {
         }
         //Testes de encapsulamento (Remova os comentários para testar)
         /*Ventilador1.marca = "Teste";
-        Ventilador2.marca = "Teste";*/
+        Ventilador2.marca = "Teste";
+        Ventilador1.potencia = 15;
+        Ventilador2.potencia = 20;*/
         
 
 
