@@ -22,7 +22,7 @@ public class Ventilador {
 
     private void setPotencia(double potenciaEnergetica){
         if(potenciaEnergetica <= 0){
-            this.potencia = potenciaEnergetica;
+            this.potencia += potenciaEnergetica;
 
         }else{
             System.out.println("Erro: a potencia do seu ventilador nao pode ser um valor negativo!");

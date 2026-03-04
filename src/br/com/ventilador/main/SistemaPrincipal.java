@@ -46,6 +46,12 @@ public class SistemaPrincipal {
         if(Ventilador2.Verificar(Ventilador2.status) == true){
                 System.out.println("O ventilador " + Ventilador2.getMarca() +" desligara em: " + Ventilador2.getTemporizador() + " minutos!");
         }
-}
+        //Testes de encapsulamento (Remova os comentários para testar)
+        /*Ventilador1.marca = "Teste";
+        Ventilador2.marca = "Teste";*/
+        
 
+
+}
+        
 }
