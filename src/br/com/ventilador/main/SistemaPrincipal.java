@@ -10,40 +10,32 @@ public class SistemaPrincipal {
 
 //Ventilador 1
 
-        Ventilador Ventilador1 = new Ventilador("Arno");
-        System.out.println("Potencia do ventilador 1: ");
-        Ventilador1.definirPotencia(50);
-        System.out.println("Tamanho do ventilador 1: ");
-        Ventilador1.definirTamanho(20);
-        System.out.println("Temporizador do ventilador 1: ");
+        Ventilador Ventilador1 = new Ventilador("Arno", 50.0, 20);
+        System.out.println("Temporizador do ventilador " + Ventilador1.getMarca() + ": ");
         Ventilador1.definirTemporizador(65);
 
 //Ventilador 2 (Testes com valores além do limite estabelecido, causando erro esperado)
 
-        Ventilador Ventilador2 = new Ventilador("Mondial");
-        System.out.println("Potencia do ventilador 2: ");
-        Ventilador2.definirPotencia(-150);
-        System.out.println("Tamanho do ventilador 2: ");
-        Ventilador2.definirTamanho(61);
-        System.out.println("Temporizador do ventilador 2: ");
+        Ventilador Ventilador2 = new Ventilador("Mondial", -150.0, 61);
+        System.out.println("Temporizador do ventilador " + Ventilador2.getMarca() + ": ");
         Ventilador2.definirTemporizador(190);
 
 //Exibindo Resultados
 
         System.out.println("\n<---Status do ventilador 1 --->");
-        if(Ventilador1.Verificar(Ventilador1.status) == true){
+        if(Ventilador1.isFuncionando()){
                 System.out.println("Marca: " + Ventilador1.getMarca() + " | Potencia: "+ Ventilador1.getPotencia() + " W | Tamanho: " + Ventilador1.getTamanho() + "CM");
         }
         System.out.println("\n<---Status do ventilador 2 --->");
-        if(Ventilador2.Verificar(Ventilador2.status) == true){
+        if(Ventilador2.isFuncionando()){
                 System.out.println("Marca: " + Ventilador2.getMarca() + " | Potencia: "+ Ventilador2.getPotencia() + " W | Tamanho: " + Ventilador2.getTamanho() + "CM");
         } 
         System.out.println("\n<---Temporizador 1--->");
-        if(Ventilador2.Verificar(Ventilador1.status) == true){
+        if(Ventilador1.isFuncionando()){
                 System.out.println("O ventilador " + Ventilador1.getMarca() +" desligara em: " + Ventilador1.getTemporizador() + " minutos!");
         }
          System.out.println("\n<---Temporizador 2--->");
-        if(Ventilador2.Verificar(Ventilador2.status) == true){
+        if(Ventilador2.isFuncionando()){
                 System.out.println("O ventilador " + Ventilador2.getMarca() +" desligara em: " + Ventilador2.getTemporizador() + " minutos!");
         }
         //Testes de encapsulamento (Remova os comentários para testar)
